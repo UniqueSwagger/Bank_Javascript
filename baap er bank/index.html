@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baap Er Bank</title>
+
+    <!-- tailwind css -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-5xl text-center mt-16">
+        Welcome to my
+        <span class="font-semibold text-purple-600">Baap-Er-Bank</span>!!!
+      </h1>
+    </header>
+    <main>
+      <!-- mx-auto diye div ba section k center align kora hoy -->
+      <section class="bg-green-100 w-3/4 mx-auto mt-8 p-8">
+        <div class="flex flex-col items-center">
+          <h3 class="text-2xl mb-4">Please Login</h3>
+          <input
+            id="user-email"
+            class="
+              rounded
+              px-2
+              p-1
+              block
+              w-3/4
+              mb-4
+              focus:outline-none focus:ring
+            "
+            type="text"
+            placeholder="your email"
+            required
+          />
+          <input
+            id="user-password"
+            class="
+              rounded
+              px-2
+              p-1
+              block
+              w-3/4
+              mb-4
+              focus:outline-none focus:ring
+            "
+            type="password"
+            name=""
+            id=""
+            placeholder="password"
+            required
+          />
+          <button
+            id="login-submit"
+            class="
+              bg-gray-800
+              text-white
+              p-2
+              px-6
+              w-32
+              mt-4
+              font-semibold
+              rounded
+              hover:bg-blue-700
+            "
+          >
+            Submit
+          </button>
+          <dialog id="pass-dialog">
+            You have entered an incorrect password
+          </dialog>
+          <dialog id="email-dialog">
+            Email address is not valid.Please enter a valid email address.
+          </dialog>
+          <dialog id="forBoth-dialog">Invalid Info.</dialog>
+          <dialog id="forEmpty-dialog">Please fill out this form</dialog>
+        </div>
+      </section>
+    </main>
+    <script src="js/login.js"></script>
+  </body>
+</html>

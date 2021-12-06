@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functional Bank</title>
+    <!-- tailwind css -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-5xl text-center mt-8">
+        Welcome to my <span class="text-blue-700">functional bank!!!</span>
+      </h1>
+    </header>
+    <main class="w-3/4 mx-auto">
+      <section class="grid grid-cols-3 gap-4 text-white mt-10">
+        <div class="bg-gray-600 p-8 rounded flex flex-col gap-2">
+          <h3 class="text-2xl">Deposit</h3>
+          <h1 class="text-4xl">$<span id="deposit-total">00</span></h1>
+        </div>
+        <div class="bg-purple-600 p-8 rounded flex flex-col gap-2">
+          <h3 class="text-2xl">Withdraw</h3>
+          <h1 class="text-4xl">$<span id="withdraw-total">00</span></h1>
+        </div>
+        <div class="bg-pink-600 p-8 rounded flex flex-col gap-2">
+          <h3 class="text-2xl">Balance</h3>
+          <h1 class="text-4xl">$<span id="balance-total">1240</span></h1>
+        </div>
+      </section>
+      <section class="grid grid-cols-2 gap-16 mt-8">
+        <div class="bg-indigo-300 p-8 rounded flex flex-col gap-4">
+          <h3 class="text-3xl">Please deposit</h3>
+          <input
+            id="deposit-input"
+            class="block w-3/4 p-2 rounded focus:outline-none focus:ring"
+            type="text"
+            placeholder="$ amount you wanna deposit"
+          />
+          <button
+            id="deposit-btn"
+            class="bg-gray-800 w-1/4 p-2 rounded text-white font-semibold"
+          >
+            Deposit
+          </button>
+        </div>
+        <div class="bg-green-400 p-8 rounded flex flex-col gap-4">
+          <h3 class="text-3xl">Please withdraw</h3>
+          <input
+            id="withdraw-input"
+            class="block w-3/4 p-2 rounded focus:outline-none focus:ring"
+            type="text"
+            placeholder="$ amount you wanna withdraw"
+          />
+          <button
+            id="withdraw-btn"
+            class="bg-gray-800 w-1/4 p-2 rounded text-white font-semibold"
+          >
+            Withdraw
+          </button>
+        </div>
+      </section>
+      <!-- error message -->
+      <dialog id="error-message-1">
+        "You cannot withdraw more than what you have in your account"
+      </dialog>
+      <dialog id="error-message-2">"PLease give a valid amount"</dialog>
+    </main>
+
+    <script src="banking.js"></script>
+  </body>
+</html>
